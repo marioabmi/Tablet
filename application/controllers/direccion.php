@@ -1,7 +1,11 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Direccion extends CI_Controller {
+	    public function __construct()
+    {
+        parent::__construct();
+        $this->load->helper('url');     
+    }   
 
 	/**
 	 * Index Page for this controller.
@@ -20,6 +24,17 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('hefo/head');
+		$this->load->view('table');
+		$this->load->view('hefo/footer');
 	}
+
+	public function table()
+	{
+		$this->load->view('hefo/head');
+		$this->load->view('tablet');
+		$this->load->view('hefo/footer');
+	}
+
+
 }
