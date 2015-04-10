@@ -17,7 +17,7 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> Roberto
+								<i class="halflings-icon white user"></i> <?php echo $usuario; ?>
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
@@ -25,7 +25,7 @@
  									<span> Cuenta</span>
 								</li>
 								<li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
-								<li><a href="login.html"><i class="halflings-icon off"></i> Salir</a></li>
+								<li><a href="<?php echo base_url().'home/logout'; ?>"><i class="halflings-icon off"></i> Salir</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->
@@ -45,8 +45,8 @@
 			<div id="sidebar-left" class="span2">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li><a href="<?php echo base_url().'direccion/'; ?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
-						<li><a href="<?php echo base_url().'direccion/table'; ?>"><i class="icon-envelope"></i><span class="hidden-tablet"> Messages</span></a></li>						
+						<li><a href="<?php echo base_url().'home/'; ?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
+						<li><a href="<?php echo base_url().'direccion/tablet'; ?>"><i class="icon-envelope"></i><span class="hidden-tablet"> Messages</span></a></li>						
 					</ul>
 				</div>
 			</div>
@@ -66,10 +66,8 @@
 			<ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
-					<a href="index.html">Home</a> 
-					<i class="icon-angle-right"></i>
-				</li>
-				<li><a href="#">Tables</a></li>
+					<a href="index.html">Home</a>					
+				</li>				
 			</ul>
 
 			<div class="row-fluid sortable">		
