@@ -3,38 +3,47 @@
 class Direccion extends CI_Controller {
 	    public function __construct()
     {
-        parent::__construct();
-        $this->load->helper('url');     
+        parent::__construct();        
+        @ session_start();
+          $this->load->helper('url');
+          $this->load->library('pagination');
+          $this->load->library(array('session','form_validation'));     
     }   
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('hefo/head');
-		$this->load->view('table');
-		$this->load->view('hefo/footer');
-	}
 
-	public function table()
-	{
-		$this->load->view('hefo/head');
-		$this->load->view('tablet');
-		$this->load->view('hefo/footer');
-	}
+	function index()
+              {
+                if($this->session->userdata('logged_in'))
+                  {
+                    $session_data = $this->session->userdata('logged_in');
+                    $data['usuario'] = $session_data['usuario'];
+                    $this->load->view('hefo/head', $data);     
+                    $this->load->view('table', $data);
+                    $this->load->view('hefo/footer', $data);
+                  }
+                else
+                  {
+                    //If no session, redirect to login page
+                    redirect('login', 'refresh');
+                  }
+              }
+
+	public function tablet()
+			{
+                if($this->session->userdata('logged_in'))
+                  {
+                    $session_data = $this->session->userdata('logged_in');
+                    $data['usuario'] = $session_data['usuario'];
+                    $this->load->view('hefo/head', $data);     
+                    $this->load->view('tablet', $data);
+                    $this->load->view('hefo/footer', $data);
+                  }
+                else
+                  {
+                    //If no session, redirect to login page
+                    redirect('login', 'refresh');
+                  }
+              }
 
 
 }
