@@ -1,12 +1,29 @@
 <body>
+		<style type="text/css">
+			body { background: url(<?php echo base_url().'seteo/logo/fondo.jpg';?>) !important; }
+		</style>	
 		<div class="container-fluid-full">
-		<div class="row-fluid">
-					
-			<div class="row-fluid">
-				<div class="login-box">					
-					<h2>Accede a tu Cuenta</h2>
+			<ul class="breadcrumb">
+					<li>
+						<i class="icon-home"></i>
+						<center>
+							<a>
+							<h1 aling="center">Sisteme de Ventas Multirepuesto</h1>
+							</a>
+						</center>											
+					</li>
+				
+				</ul>
+
+			<div class="row-fluid">					
+				<div class="row-fluid">
+					<div class="login-box">
+					<center>
+					<h1 aling="center">Accede a tu Cuenta</h1>
+					</center>
 						<?php echo validation_errors(); ?>
-   						<?php echo form_open('verificarlogin'); ?>					
+   						<?php echo form_open('verificarlogin'); ?>
+   						<form class="form-horizontal">					
 						<fieldset>
 							
 							<div class="input-prepend" title="Usuario">								
@@ -21,18 +38,14 @@
 							</div>
 							<div class="clearfix"></div>							
 
-							<div class="button-login">	
+							<div class="button-login" aling="center">
+									
 								<button type="submit" class="btn btn-primary">Login</button>
+								
 							</div>
 							<div class="clearfix"></div>
-					</form>					
-
+						</div>
+				</div><!--/span-->
 			</div><!--/row-->
-			
-
-			</div><!--/.fluid-container-->
-	
-		</div><!--/fluid-row-->
-	
-
+	</div><!--/.fluid-container-->
 </body>

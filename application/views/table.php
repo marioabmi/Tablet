@@ -60,16 +60,14 @@
 			</noscript>
 			
 			<!-- start: Content -->
-			<div id="content" class="span10">
-			
-			
-			<ul class="breadcrumb">
-				<li>
-					<i class="icon-home"></i>
-					<a href="<?php echo base_url().'direccion/index';?>">Home</a>					
-				</li>
+		<div id="content" class="span10">
+				<ul class="breadcrumb">
+					<li>
+						<i class="icon-home"></i>
+						<a href="<?php echo base_url().'direccion/index';?>">Home</a>					
+					</li>
 				
-			</ul>
+				</ul>
 
 			<div class="row-fluid sortable">		
 				<div class="box span12">
@@ -84,10 +82,10 @@
   							<img
     							src="<?php echo base_url().'seteo/logo/multi.png'; ?>"
     							alt="a cute kitten">
-							</picture>
-
-						           
+							</picture>						           
 					</div>
-				</div><!--/span-->
-			
-			</div><!--/row-->			
+				</div><!--/span-->			
+			</div><!--/row-->
+		</div>
+	
+			<div class="clearfix"></div>			

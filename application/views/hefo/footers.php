@@ -1,13 +1,4 @@
-	<footer class="clase-general">
-		<p>
-			<center>
-			&copy; 2015 <a href="http://www.multirepuestos.com.sv/">Derechos Reservador</a>
-			</center>
-		</p>
-
-	</footer>
-	
-	<!-- start: JavaScript-->
+<!-- start: JavaScript-->
 
 		<script src="<?php echo base_url().'seteo/js/jquery-1.9.1.min.js';?>"></script>
 		<script src="<?php echo base_url().'seteo/js/jquery-migrate-1.0.0.min.js';?>"></script>
