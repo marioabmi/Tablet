@@ -25,7 +25,7 @@ class Index extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('hefo/head');
-		$this->load->view('table');
+		$this->load->view('inicio');
 		$this->load->view('hefo/footer');
 	}
 }

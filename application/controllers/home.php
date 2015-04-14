@@ -17,7 +17,7 @@
                     $session_data = $this->session->userdata('logged_in');
                     $data['usuario'] = $session_data['usuario'];
                     $this->load->view('hefo/head', $data);     
-                    $this->load->view('table', $data);
+                    $this->load->view('inicio', $data);
                     $this->load->view('hefo/footer', $data);
                   }
                 else
