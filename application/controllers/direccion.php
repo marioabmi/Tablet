@@ -7,6 +7,7 @@ class Direccion extends CI_Controller {
         @ session_start();
           $this->load->helper('url');
           $this->load->library('pagination');
+          $this->load->model('model_carrito');
           $this->load->library(array('session','form_validation'));     
     }
 
@@ -16,6 +17,7 @@ class Direccion extends CI_Controller {
                   {
                     $session_data = $this->session->userdata('logged_in');
                     $data['usuario'] = $session_data['usuario'];
+                    $data['carrito'] =$this->model_carrito->carrito();
                     $this->load->view('hefo/head', $data);     
                     $this->load->view('form/form', $data);
                     $this->load->view('hefo/footer', $data);
