@@ -76,37 +76,34 @@
 							  <div class="control-group">
 								<label class="control-label" for="selectError">Cliente</label>
 								<div class="controls">
-								  <select id="selectError" data-rel="chosen">
-									<option>Option 1</option>
-									<option>Option 2</option>
-									<option>Option 3</option>
-									<option>Option 4</option>
-									<option>Option 5</option>
-									<option>Option 1</option>
-									<option>Option 2</option>
-									<option>Option 3</option>
-									<option>Option 4</option>
-									<option>Option 5</option>
-
-								  </select>
+								  <select required="required" data-rel="chosen" id="categoria">
+                  					<option value='Varios'  selected> Selecciona Cliente</option>
+                						<?php 
+                  							foreach($cliente as $fila)
+                  							{
+                						?>
+                  							<option value="<?=$fila -> idCliente ?>"><?=$fila -> nombre ?></option>
+                						<?php
+                  							}
+                						?>        
+                							</select>
 								</div>
 							  </div>
 
 							  <div class="control-group">
 								<label class="control-label" for="selectError">Sucursal</label>
 								<div class="controls">
-								  <select id="selectError1" data-rel="chosen">
-									<option>Option 1</option>
-									<option>Option 2</option>
-									<option>Option 3</option>
-									<option>Option 4</option>
-									<option>Option 5</option>									
-									<option>Option 2</option>
-									<option>Option 3</option>
-									<option>Option 4</option>
-									<option>Option 5</option>
-
-								  </select>
+								  <select data-rel="chosen" id="categoriaB">
+                  					<option value=''  selected> Seleccionar Sucursal</option>
+                						<?php 
+                  							foreach($sucursal as $fila)
+                  							{
+                						?>
+                  							<option value="<?=$fila -> idSucursal ?>"><?=$fila -> nombre ?></option>
+                						<?php
+                  							}
+                						?>        
+                							</select>
 								</div>
 							  </div>
 							  <div class="form-actions">
@@ -134,112 +131,24 @@
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
-								  <th>Username</th>
-								  <th>Date registered</th>
-								  <th>Role</th>
-								  <th>Status</th>
-								  <th>Actions</th>
+								  <th>Codigo</th>
+								  <th>Nombre</th>
+								  <th>Descripcion</th>
+								  <th>Existencia</th>
+								  <th>Prc Mayoreo</th>
+								  <th>Prc Preferencial</th>
+								  <th>Prc Detalle</th>
+								  <th>Equivalencia1</th>
+								  <th>Equivalencia2</th>
 							  </tr>
 						  </thead>   
-						  <tbody>
-							<tr>
-								<td>Dennis Ji</td>
-								<td class="center">2012/01/01</td>
-								<td class="center">Member</td>
-								<td class="center">
-									<span class="label label-success">Active</span>
-								</td>
-								<td class="center">
-									<a class="btn btn-success" href="#">
-										<i class="halflings-icon white zoom-in"></i>  
-									</a>
-									<a class="btn btn-info" href="#">
-										<i class="halflings-icon white edit"></i>  
-									</a>
-									<a class="btn btn-danger" href="#">
-										<i class="halflings-icon white trash"></i> 
-									</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Dennis Ji</td>
-								<td class="center">2012/01/01</td>
-								<td class="center">Member</td>
-								<td class="center">
-									<span class="label label-success">Active</span>
-								</td>
-								<td class="center">
-									<a class="btn btn-success" href="#">
-										<i class="halflings-icon white zoom-in"></i>  
-									</a>
-									<a class="btn btn-info" href="#">
-										<i class="halflings-icon white edit"></i>  
-									</a>
-									<a class="btn btn-danger" href="#">
-										<i class="halflings-icon white trash"></i> 
-									</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Dennis Ji</td>
-								<td class="center">2012/01/01</td>
-								<td class="center">Member</td>
-								<td class="center">
-									<span class="label label-success">Active</span>
-								</td>
-								<td class="center">
-									<a class="btn btn-success" href="#">
-										<i class="halflings-icon white zoom-in"></i>  
-									</a>
-									<a class="btn btn-info" href="#">
-										<i class="halflings-icon white edit"></i>  
-									</a>
-									<a class="btn btn-danger" href="#">
-										<i class="halflings-icon white trash"></i> 
-									</a>
-								</td>
-								</td>
-							</tr>
-							<tr>
-								<td>Dennis Ji</td>
-								<td class="center">2012/01/01</td>
-								<td class="center">Member</td>
-								<td class="center">
-									<span class="label label-success">Active</span>
-								</td>
-								<td class="center">
-									<a class="btn btn-success" href="#">
-										<i class="halflings-icon white zoom-in"></i>                                            
-									</a>
-									<a class="btn btn-info" href="#">
-										<i class="halflings-icon white edit"></i>                                            
-									</a>
-									<a class="btn btn-danger" href="#">
-										<i class="halflings-icon white trash"></i> 
-									</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Dennis Ji</td>
-								<td class="center">2012/02/01</td>
-								<td class="center">Staff</td>
-								<td class="center">
-									<span class="label label-important">Banned</span>
-								</td>
-								<td class="center">
-									<a class="btn btn-success" href="#">
-										<i class="halflings-icon white zoom-in"></i>                                            
-									</a>
-									<a class="btn btn-info" href="#">
-										<i class="halflings-icon white edit"></i>                                            
-									</a>
-									<a class="btn btn-danger" href="#">
-										<i class="halflings-icon white trash"></i> 
-									</a>
-								</td>
-							</tr>
+						 
+						  	<tbody id = "cuerpo">
+                                            
+                                            
+                            </tbody>
+							
 
-						  </tbody>
 					  </table>            
 					</div>
 				</div><!--/span-->

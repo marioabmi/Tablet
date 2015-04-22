@@ -5,6 +5,7 @@ class Verificarlogin extends CI_Controller {
  		function __construct()
  			{
    				parent::__construct();
+          @ session_start();
    				$this->load->helper('url');
    				$this->load->model('login_model','',TRUE);
    				$this->load->helper('security');
